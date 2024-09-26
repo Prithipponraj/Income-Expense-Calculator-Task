@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Income and Expense Tracker</title>
+</head>
+
+<body>
+    <!-- header section -->
+
+    <div class="container">
+        <h1>Income and Expense Tracker</h1>
+        <div class="summary">
+            <div class="totalIncome">Total Income: ₹<span id="totalIncome">0</span></div>
+            <div class="NetBalance">Net Balance: ₹<span id="netBalance">0</span></div>
+            <div class="totalExpenses">Total Expenses: ₹<span id="totalExpenses">0</span></div>
+        </div>
+
+        <!-- entry format -->
+
+        <form id="entryForm">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <div class="radio-group">
+                <label><input type="radio" name="type" value="income" checked> Income</label>
+                <label><input type="radio" name="type" value="expense"> Expense</label>
+            </div>
+            <button type="submit">Add Transaction</button>
+        </form>
+
+        <!-- filters section -->
+
+        <div class="filters">
+            <label><input type="radio" name="filter" value="all" checked> All</label>
+            <label><input type="radio" name="filter" value="income"> Income</label>
+            <label><input type="radio" name="filter" value="expense"> Expense</label>
+        </div>
+        <!-- entry list -->
+
+        <ul id="entryList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
